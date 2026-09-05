@@ -1,0 +1,281 @@
+:root {
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-border: #dfe3e8;
+  --color-text: #1f2933;
+  --color-text-sub: #616e7c;
+  --color-primary: #2f6fed;
+  --color-primary-dark: #1f4fb8;
+  --color-danger: #e5484d;
+  --color-danger-dark: #c53135;
+  --color-success: #2fa86a;
+  --color-fm: #7c3aed;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.app-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 20px 16px;
+}
+
+.app-header h1 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+
+.app-header__desc {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.92;
+  max-width: 800px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.status-text {
+  font-size: 0.8rem;
+  color: var(--color-text-sub);
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--secondary {
+  background-color: #eef1f4;
+  color: var(--color-text);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: var(--color-text-sub);
+  border: 1px solid var(--color-border);
+}
+
+.btn--small {
+  padding: 6px 10px;
+  font-size: 0.78rem;
+}
+
+.btn--copy {
+  background-color: #e7f6ee;
+  color: var(--color-success);
+}
+
+.btn--pin {
+  background-color: #fff4e0;
+  color: #b06b00;
+}
+
+.btn--pin.is-active {
+  background-color: #b06b00;
+  color: #fff;
+}
+
+.btn--delete {
+  background-color: #fdeceb;
+  color: var(--color-danger-dark);
+}
+
+.empty-message {
+  color: var(--color-text-sub);
+  text-align: center;
+  padding: 40px 0;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.history-item.is-pinned {
+  border-color: #f0c36d;
+  background-color: #fffaf0;
+}
+
+.history-item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.history-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.badge--text {
+  background-color: #eef1f4;
+  color: var(--color-text-sub);
+}
+
+.badge--fm {
+  background-color: #ede9fe;
+  color: var(--color-fm);
+}
+
+.timestamp {
+  font-size: 0.72rem;
+  color: var(--color-text-sub);
+}
+
+.history-item__actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.plain-text-block {
+  margin: 0;
+  font-size: 0.88rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.fm-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fm-block {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fm-block__label {
+  background-color: #f3f0fb;
+  color: var(--color-fm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+
+.fm-block__body {
+  margin: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 320px;
+  overflow-y: auto;
+  background-color: #fbfaff;
+  font-family: "Consolas", "SFMono-Regular", Menlo, monospace;
+}
+
+.header-block__body {
+  background-color: #f9fafb;
+  font-family: "Consolas", "SFMono-Regular", Menlo, monospace;
+  font-size: 0.8rem;
+}
+
+.fm-block__label--row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.dirty-hint {
+  color: #b06b00;
+  font-weight: 700;
+}
+
+.fm-block__editor {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  border: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.fm-block__editor:focus {
+  outline: 2px solid var(--color-fm);
+  outline-offset: -2px;
+}
+
+.fm-block__save-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  background-color: #fbfaff;
+  border-top: 1px solid var(--color-border);
+}
+
+.btn--save {
+  background-color: #ede9fe;
+  color: var(--color-fm);
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.05rem;
+  }
+
+  .history-item__actions .btn {
+    flex: 1 1 auto;
+  }
+}

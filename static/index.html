@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クリップボード履歴マネージャー</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>クリップボード履歴マネージャー（ローカル専用）</h1>
+    <p class="app-header__desc">
+      このPCのクリップボードを監視し、通常のテキストと、FileMakerの独自形式（制御コード＋XML）を分けて表示します。
+      外部には一切公開されず、このPC内でのみ動作します。
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <button type="button" id="refresh-btn" class="btn btn--secondary">今すぐ更新</button>
+      <button type="button" id="clear-btn" class="btn btn--ghost">ピン留め以外をすべて削除</button>
+      <span id="status-text" class="status-text"></span>
+    </div>
+
+    <p id="empty-message" class="empty-message" hidden>まだ履歴がありません。何かコピーしてみてください。</p>
+
+    <ul id="history-list" class="history-list"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
