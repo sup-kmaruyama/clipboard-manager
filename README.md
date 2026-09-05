@@ -78,10 +78,18 @@ clipboard-manager/
 ├── 起動.bat                ダブルクリックで起動する用
 ├── register_protocol.bat   fmclip:// リンクを使えるようにする登録(setup.batからも呼ばれる)
 ├── launch_protocol.bat     fmclip:// リンクから呼び出される起動スクリプト
-├── launcher.html           fmclip:// 起動ボタンを試すためのサンプルページ
+├── launcher.html           fmclip:// 起動ボタンを試すためのサンプルページ(ローカルで開く用)
+├── public/
+│   └── index.html          Cloudflare Pagesで公開する起動ページ(launcher.htmlの公開用コピー)
 ├── history_data.json       履歴の保存先（自動生成。削除しても支障なし）
 └── README.md               本ファイル
 ```
+
+## Web公開について（起動ページのみ）
+
+`public/index.html` はCloudflare Pagesで公開しています。公開されるのは「起動ボタンのページ」だけで、`server.py`などのソースコードやクリップボードの中身が外部に公開されることはありません（Cloudflare Pagesのビルド出力ディレクトリを`public`に限定しているため）。
+
+- 公開URL: `（デプロイ後にここへ追記）`
 
 ## 注意事項
 
