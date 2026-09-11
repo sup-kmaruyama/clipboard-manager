@@ -81,6 +81,8 @@ clipboard-manager/
 ├── launcher.html           fmclip:// 起動ボタンを試すためのサンプルページ(ローカルで開く用)
 ├── public/
 │   └── index.html          Cloudflare Pagesで公開する起動ページ(launcher.htmlの公開用コピー)
+├── functions/
+│   └── _middleware.js      Cloudflare Pages Functions：公開ページ全体にBasic認証をかける
 ├── history_data.json       履歴の保存先（自動生成。削除しても支障なし）
 └── README.md               本ファイル
 ```
