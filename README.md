@@ -80,9 +80,9 @@ clipboard-manager/
 ├── launch_protocol.bat     fmclip:// リンクから呼び出される起動スクリプト
 ├── launcher.html           fmclip:// 起動ボタンを試すためのサンプルページ(ローカルで開く用)
 ├── public/
-│   └── index.html          Cloudflare Pagesで公開する起動ページ(launcher.htmlの公開用コピー)
-├── functions/
-│   └── _middleware.js      Cloudflare Pages Functions：公開ページ全体にBasic認証をかける
+│   └── index.html          Cloudflareで公開する起動ページ(launcher.htmlの公開用コピー)
+├── worker.js               公開ページ配信前にBasic認証をかけるWorkerスクリプト
+├── wrangler.jsonc          Worker設定(アセット配信ディレクトリ・エントリポイント指定)
 ├── history_data.json       履歴の保存先（自動生成。削除しても支障なし）
 └── README.md               本ファイル
 ```
